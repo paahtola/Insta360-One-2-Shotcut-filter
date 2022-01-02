@@ -11,28 +11,31 @@ Insta360 One creates excellent 360 videos, but you can't use it directly with Sh
 INSTALLATION
 ------------
 
-Step 1A: From source
-  1) Download frei0r source
-  2) Download halfmirr0r source below
+Step 1A: Linux binary
+  1) Download halfmirr0r source here
+  2) run instal.sh to
+  - copy halfmirror.so to Shotcut tree
+  - copy control surface to Shotcut tree
+
+
+OR
+
+
+Step 1B: From source
+  1) Download frei0r source https://frei0r.dyne.org/
+  2) Download halfmirr0r source here
   3) Copy halfmirr0r source to frei0r source-tree
   4) Modify frei0r configuration by adding line below
       ...(to be added)
   5) Follow frei0r compilation instructions
   6) Finally
-  
-      A) copy compiled halfmirr0r.so (or halfmirr0r.dylib or halfmirr0r.dll) to Shotcut tree
-      B) copy control surface to Shotcut tree
-
-OR
-
-Step 1B: Linux binary
-  1) Download halfmirr0r source below
-  2) copy halfmirror.so to Shotcut tree
-  3) copy control surface to Shotcut tree
+    - copy compiled halfmirr0r.so (or halfmirr0r.dylib or halfmirr0r.dll) to Shotcut tree
+    - copy control surface to Shotcut tree
 
 
 
-Step 2: Parameter set for Bigsh0t filters.
+
+Step 2: You might want to copy Nearly Perfect -parametres to get good stitching quickly
    1) Copy xxx to yyy
 
 
