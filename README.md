@@ -28,7 +28,7 @@ Step 1B: From source
   4) Modify frei0r configuration by adding line below
       ...(to be added)
   5) Follow frei0r compilation instructions
-  6) Finally run install.sh to
+  6) Finally: (Linux users use install.sh)
   - copy compiled halfmirr0r.so (or halfmirr0r.dylib or halfmirr0r.dll) to Shotcut tree
   - copy control surface to Shotcut tree
 
