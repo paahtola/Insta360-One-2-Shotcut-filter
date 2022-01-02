@@ -20,9 +20,11 @@ From source
       7) copy control surface to Shotcut tree
 
 
+
 Linux binary
   1) copy halfmirror.so to Shotcut tree
   2) copy control surface to Shotcut tree
+
 
 
 Usage:
