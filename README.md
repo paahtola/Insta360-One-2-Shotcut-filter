@@ -19,8 +19,9 @@ Step 1A: From source
       ...(to be added)
   5) Follow frei0r compilation instructions
   6) Finally
-      6) copy compiled halfmirr0r.so (or halfmirr0r.dylib or halfmirr0r.dll) to Shotcut tree
-      7) copy control surface to Shotcut tree
+  
+      A) copy compiled halfmirr0r.so (or halfmirr0r.dylib or halfmirr0r.dll) to Shotcut tree
+      B) copy control surface to Shotcut tree
 
 OR
 
