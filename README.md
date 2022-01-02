@@ -28,7 +28,7 @@ Step 1B: From source
   4) Modify frei0r configuration by adding line below
       ...(to be added)
   5) Follow frei0r compilation instructions
-  6) Finally
+  6) Finally run install.sh to
     - copy compiled halfmirr0r.so (or halfmirr0r.dylib or halfmirr0r.dll) to Shotcut tree
     - copy control surface to Shotcut tree
 
@@ -40,6 +40,7 @@ Step 2: You might want to copy Nearly Perfect -parametres to get good stitching 
 
 
 USAGE
+-----
 
 1) Run Shotcut
 2) Load your 360 footage as you would any video footage
