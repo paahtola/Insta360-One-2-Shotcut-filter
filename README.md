@@ -13,7 +13,7 @@ INSTALLATION
 
 Step 1A: Linux binary
   1) Download halfmirr0r source here
-  2) run instal.sh to
+  2) run install.sh to
   - copy halfmirror.so to Shotcut tree
   - copy control surface to Shotcut tree
 
