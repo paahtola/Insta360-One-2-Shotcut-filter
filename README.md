@@ -35,19 +35,20 @@ Step 1B: From source
 
 
 
-Step 2: You might want to copy Nearly Perfect -parametres to get good stitching quickly
-   1) Copy xxx to yyy
+Step 2: You might want to copy nearly perfect -parametres for BigSh0t-filter to get good Insta360 stitching quickly
+   1) Copy Insta360 to user directory (cp Insta360 ~/.var/app/org.shotcut.Shotcut/data/Mellytech/Shotcut/presets/bigsh0t_hemi_to_eq )
 
 
 USAGE
 -----
 
 1) Run Shotcut
-2) Load your 360 footage as you would any video footage
-3) Apply filters
+2) Load your 360 footage as you would any video footage and drag it to the timeline
+3) Select clip
+4) Apply filters in this order
     1) halfmirr0r video filter
     2) 360: circular to equirectangular
-         - Pick "Almost perfect" from saved parametres
+         - Pick "Insta360" from saved parametres
     3) Any set of other filters you'd normally use: sharpening and color grading
       
       
