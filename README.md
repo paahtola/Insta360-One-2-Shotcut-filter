@@ -22,15 +22,15 @@ OR
 
 
 Step 1B: From source
-  1) Download frei0r source https://frei0r.dyne.org/
+  1) Download frei0r effects source https://frei0r.dyne.org/
   2) Download halfmirr0r source here
-  3) Copy halfmirr0r source to frei0r source-tree
-  4) Modify frei0r configuration by adding line below
-      ...(to be added)
-  5) Follow frei0r compilation instructions
-  6) Finally: (Linux users use install.sh)
-  - copy compiled halfmirr0r.so (or halfmirr0r.dylib or halfmirr0r.dll) to Shotcut tree
-  - copy control surface to Shotcut tree
+  3) Copy src/halfmirr0r source to frei0r source-tree. Put it to src/filters/
+  4) Edit CMakefiles.txt frei0r source directory src/filters and add halfmirr0r directory
+  5) cmake .
+  6) make
+  7) Finally: (Linux users use install.sh)
+  - copy compiled src/filters/halfmirr0r.so (or halfmirr0r.dylib or halfmirr0r.dll) to Shotcut tree (sudo cp src/halfmirr0r/halfmirr0r.so  /var/lib/flatpak/app/org.shotcut.Shotcut/x86_64/active/files/lib/frei0r-1)
+  - copy control surface to Shotcut tree (sudo cp -R qml/halfmirr0r /var/lib/flatpak/app/org.shotcut.Shotcut/x84_64/stable/active/files/share/shotcut/qml/filters/ )
 
 
 
