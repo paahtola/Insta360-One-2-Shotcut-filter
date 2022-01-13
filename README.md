@@ -19,6 +19,7 @@ Step 1A: Linux binary
   2) run install.sh to
   - copy halfmirror.so to Shotcut tree
   - copy control surface to Shotcut tree
+That is, at terminal, type: sh install.sh
 
 
 OR
