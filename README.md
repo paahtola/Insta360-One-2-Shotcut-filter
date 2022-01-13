@@ -1,7 +1,7 @@
 
 # Insta360 One 2 Shotcut
 
-<img src=https://github.com/paahtola/Insta360-One-2-Shotcut-filter/blob/main/public/images/picshot.png?raw=true>
+!(https://github.com/paahtola/Insta360-One-2-Shotcut-filter/blob/main/public/images/picshot.png?raw=true)
 
 Insta360 One creates excellent 360 videos, but you can't use it directly with Shotcut video editor. Using this dirty and straighforward filter, you'll be able to use all Shotcut capabilities (included Bigsh0t-360 filters) and color grading etc. to create stunning and immersive videos.
 
