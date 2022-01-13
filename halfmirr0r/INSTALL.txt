@@ -1,0 +1,28 @@
+halfmirr0r
+
+
+Mirror effects
+
+
+
+1) Download frei0r effecs source code
+
+2) copy src/halfmirr0r directory to frei0r source directory. Put it to src/filters/
+
+3) Edit CMakefiles.txt in frei0r source directory src/filters and add halfmirr0r directory
+
+4) cmake .
+
+5) make
+
+
+To install new effect,
+
+1) copy newly compilad src/filters/halfmirr0r.so to Shotcut directory "frei0r"
+
+2) copy qml/harfmirr0r directory to shotcut qml/filters
+
+
+For example
+1) sudo cp src/halfmirr0r/halfmirr0r.so /var/lib/flatpak/app/org.shotcut.Shotcut/x86_64/stable/active/files/lib/frei0r-1/
+2) sudo cp -R qml/halfmirr0r /var/lib/flatpak/app/org.shotcut.Shotcut/x86_64/stable/active/files/share/shotcut/qml/filters/
