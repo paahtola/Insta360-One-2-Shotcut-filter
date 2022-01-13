@@ -8,6 +8,9 @@ Insta360 One creates excellent 360 videos, but you can't use it directly with Sh
 - Currently only Linux binary included.
 
 
+This is tested on Linux Mint. Keep in mind that flatpak installs tend to update every now and then. When this happens, halfmirr0r ceases to work, because Shotcut is deleted and new installation takes place. You should reinstall this filter (sh install.sh) 
+
+
 INSTALLATION
 ------------
 
@@ -24,13 +27,12 @@ OR
 Step 1B: From source
   1) Download frei0r effects source https://frei0r.dyne.org/
   2) Download halfmirr0r source here
-  3) Copy src/halfmirr0r source to frei0r source-tree. Put it to src/filters/
+  3) Copy control surface to Shotcut tree (sudo cp -R qml/halfmirr0r /var/lib/flatpak/app/org.shotcut.Shotcut/x84_64/stable/active/files/share/shotcut/qml/filters/   3) Copy src/halfmirr0r source to frei0r source-tree. Put it to src/filters/
   4) Edit CMakefiles.txt frei0r source directory src/filters and add halfmirr0r directory
   5) cmake .
   6) make
-  7) Finally: (Linux users use install.sh)
-  - copy compiled src/filters/halfmirr0r.so (or halfmirr0r.dylib or halfmirr0r.dll) to Shotcut tree (sudo cp src/halfmirr0r/halfmirr0r.so  /var/lib/flatpak/app/org.shotcut.Shotcut/x86_64/active/files/lib/frei0r-1)
-  - copy control surface to Shotcut tree (sudo cp -R qml/halfmirr0r /var/lib/flatpak/app/org.shotcut.Shotcut/x84_64/stable/active/files/share/shotcut/qml/filters/ )
+  7) Copy compiled src/filters/halfmirr0r/halfmirr0r.so (or halfmirr0r.dylib or halfmirr0r.dll) to Shotcut tree (sudo cp src/filter/halfmirr0r/halfmirr0r.so  /var/lib/flatpak/app/org.shotcut.Shotcut/x86_64/active/files/lib/frei0r-1)
+)
 
 
 
