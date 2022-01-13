@@ -1,0 +1,19 @@
+---
+yaw: 0
+pitch: 0
+roll: -180
+frontX: 0.7496
+frontY: 0.4921
+frontUp: 270
+backX: 0.25
+backY: 0.5
+backUp: 269.4
+fov: 181.895
+radius: 0.2151
+nadirRadius: 0.2229
+nadirCorrectionStart: 0
+interpolation: 1
+projection: 0
+"shotcut:animIn": "00:00:00.000"
+"shotcut:animOut": "00:00:00.000"
+...
