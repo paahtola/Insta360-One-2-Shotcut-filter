@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/paahtola/Lataukset/frei0r-plugins-1.6.1/src/filter/halfmirr0r/halfmirr0r.c
+stdlib.h
+-
+assert.h
+-
+frei0r.h
+/home/paahtola/Lataukset/frei0r-plugins-1.6.1/src/filter/halfmirr0r/frei0r.h
+
+include/frei0r.h
+inttypes.h
+-
+

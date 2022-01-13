@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -O2 -g -DNDEBUG -shared  -o halfmirr0r.so CMakeFiles/halfmirr0r.dir/halfmirr0r.c.o  -lm 

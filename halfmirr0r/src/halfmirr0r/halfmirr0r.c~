@@ -1,0 +1,109 @@
+#include <stdlib.h>
+#include <assert.h>
+
+#include "frei0r.h"
+
+typedef struct halfmirror_instance
+{
+  unsigned int width;
+  unsigned int height;
+} halfmirror_instance_t;
+
+int f0r_init()
+{
+  return 1;
+}
+
+void f0r_deinit()
+{ /* no initialization required */ }
+
+void f0r_get_plugin_info(f0r_plugin_info_t* halfmirrorInfo)
+{
+  halfmirrorInfo->name = "Halfmirr0r";
+  halfmirrorInfo->author = "Pasi Ahtola";
+  halfmirorInfo->plugin_type = F0R_PLUGIN_TYPE_FILTER;
+  halfmirrorInfo->color_model = F0R_COLOR_MODEL_RGBA8888;
+  halfmirrorInfo->frei0r_version = FREI0R_MAJOR_VERSION;
+  halfmirrorInfo->major_version = 0; 
+  halfmirrorInfo->minor_version = 9; 
+  halfmirrorInfo->num_params =  0; 
+  halfmirrorInfo->explanation = "Mirrors half of the video for special needs";
+}
+
+void f0r_get_param_info(f0r_param_info_t* info, int param_index)
+{
+  /* no params */
+}
+
+f0r_instance_t f0r_construct(unsigned int width, unsigned int height)
+{
+  halfmirroro_instance_t* inst = (inverter_instance_t*)calloc(1, sizeof(*inst));
+  inst->width = width; inst->height = height;
+  return (f0r_instance_t)inst;
+}
+
+void f0r_destruct(f0r_instance_t instance)
+{
+  free(instance);
+}
+
+void f0r_set_param_value(f0r_instance_t instance, 
+			 f0r_param_t param, int param_index)
+{ /* no params */ }
+
+void f0r_get_param_value(f0r_instance_t instance,
+			 f0r_param_t param, int param_index)
+{ /* no params */ }
+
+void f0r_update(f0r_instance_t instance, double time,
+		const uint32_t* inframe, uint32_t* outframe)
+{
+  assert(instance);
+  inverter_instance_t* inst = (inverter_instance_t*)instance;
+  unsigned int w = inst->width;
+  if( w !& 2) {  /* Only frames with width 2,4,8,10,... are processed */
+      return;
+  }
+  unsigned int h = inst->height;
+  unsigned int x,y;
+  unsigned int middle = x/2;
+  
+  uint32_t* dst = outframe;
+  uint32_t exchange;
+  const uint32_t* src = inframe;
+  for(y=0;y<h;++y) {
+      for(x=0;x<middle;++x,++src) {
+	  *dst++ = *src;
+      }
+      src += middle;  /* Move src pointer to rightmost pixel */
+      for(x=middle;x<w;++x) {
+	  *dst++ = *(--src);
+      }
+      src += middle;  /* Move src pointer over rightmost pixel to next line after copy */
+  }
+}
+
+w=4
+middle=2
+
+      dst    src
+x      380     620
+    loop1:
+0     sij. (620->380)
+1      381     621
+    sij. (621->381)
+2      382     622
+    loop2:
+    src+=middle
+               624
+    x=middle
+2
+    sij.  (623->382)
+3    383       623
+	sij.  (622->383)
+
+               622+2
+
+
+               624
+       
