@@ -20,7 +20,7 @@ import org.shotcut.qml 1.0
 
 Metadata {
     type: Metadata.Filter
-    name: qsTr("Mun: Mirror Half")
+    name: qsTr("360: HalfMirr0r")
     objectName: 'halfmirr0r'
     mlt_service: "frei0r.halfmirr0r"
 }
